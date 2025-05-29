@@ -11,7 +11,9 @@ connectDB();
 const app = express()
 const PORT = process.env.PORT || 8000;
 
-app.use(cors())
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://mellow-pastelito-138887.netlify.app']
+}));
 app.use(express.json())
 
 app.use('/pokemons', pokemonRoutes)

@@ -22,7 +22,7 @@ export default function Pokedex() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`http://localhost:8000/pokemons?skip=${currentSkip}&limit=${limit}`);
+      const res = await fetch(`https://pokedex-mern-3.onrender.com/pokemons?skip=${currentSkip}&limit=${limit}`);
       if (!res.ok) throw new Error('Failed to fetch pokemons');
       const data = await res.json();
 
@@ -50,7 +50,7 @@ export default function Pokedex() {
     if (!newName.trim()) return alert('Name is required');
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/pokemons', {
+      const res = await fetch('https://pokedex-mern-3.onrender.com/pokemons', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: newName.trim() }),
@@ -68,7 +68,7 @@ export default function Pokedex() {
 
   const deletePokemon = async (id) => {
     try {
-      const res = await fetch(`http://localhost:8000/pokemons/${id}`, {
+      const res = await fetch(`https://pokedex-mern-3.onrender.com/pokemons/${id}`, {
         method: 'DELETE',
       });
       if (!res.ok) throw new Error('Failed to delete pokemon');
