@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #a2d2ff, #cdb4db);
+  text-align: center;
+}
+
+.landing-title {
+  font-size: 3rem;
+  color: #1d3557;
+  margin-bottom: 0.5em;
+}
+
+.landing-subtitle {
+  font-size: 1.5rem;
+  color: #457b9d;
+  margin-bottom: 1.5em;
+}
+
+.start-button {
+  font-size: 1.2rem;
+  background-color: #2a9d8f;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #21867a;
+}
